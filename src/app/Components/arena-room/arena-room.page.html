@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-img (click)="back()" src="/../assets/images/backarrow.png" class="arrow_set"></ion-img>
+        </ion-col>
+        <ion-col size="6">
+          <h3 class="title">{{arena.title}}</h3>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button color="danger" (click)="exitArenaAlert()">
+            <ion-icon name="exit"></ion-icon>
+          </ion-button>
+          <!-- <ion-img (click)="back()" src="/../assets/images/backarrow.png" class="arrow_set"></ion-img> -->
+        </ion-col>
+      </ion-row>
+    </ion-grid>`
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="top_padding_4">
+      <ion-col size="3" *ngFor="let c of cnctns ">
+        <ion-avatar>
+          <ion-img src="/../assets/images/friend2.png" class="friend_img_2"></ion-img>
+        </ion-avatar>
+        <ion-text class="name_2">
+          {{c.username}}
+        </ion-text>
+        <!-- <ion-button *ngIf="owner == user.email && owner != c.userId" color="danger" (click)="rmPLayerConfirm(c)">
+          remove
+        </ion-button> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid *ngIf="owner == user.email">
+    <ion-row class="row_margin_set">
+      <ion-col size="4" [class.selGame]="selectedGame == 'pass'">
+        <ion-img (click)="selGame('pass')" src="/../assets/images/password-round.png" class="password-round"></ion-img>
+      </ion-col>
+      <ion-col size="4" [class.selGame]="selectedGame == 'catch'">
+        <ion-img (click)="selGame('catch')" src="/../assets/images/catchpgrase-round.png" class="password-round">
+        </ion-img>
+      </ion-col>
+      <ion-col size="4" [class.selGame]="selectedGame == 'nsec'">
+        <ion-img (click)="selGame('nsec')" src="/../assets/images/90second.png" class="password-round">
+        </ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="owner != user.email">
+    <ion-row class="row_margin_set">
+      <ion-col size="4" *ngIf="selectedGame == 'pass'">
+        <ion-img src="/../assets/images/password-round.png" class="password-round"></ion-img>
+      </ion-col>
+      <ion-col size="4" *ngIf="selectedGame == 'catch'">
+        <ion-img src="/../assets/images/catchpgrase-round.png" class="password-round">
+        </ion-img>
+      </ion-col>
+      <ion-col size="4" *ngIf="selectedGame == 'nsec'">
+        <ion-img src="/../assets/images/90second.png" class="password-round">
+        </ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Ask Kumar about the player select style -->
+  <ion-grid class="row_margin_set" style="margin-bottom: 200px ;" *ngIf="selectedGame.length">
+    <ion-row>
+      <ion-col>
+        <div class=" preph">
+          <ion-avatar (click)="selPlayerOpen('TEAMA','PLAYER1','t1p1')">
+            <ion-img src="/../assets/images/qimage.jpg" class="friend_img_2"></ion-img>
+          </ion-avatar>
+          <ion-text class="name_2">
+            {{t1p1.username}}
+          </ion-text>
+        </div>
+      </ion-col>
+      <ion-col *ngIf="dis4">
+        <div class=" preph">
+          <ion-avatar (click)="selPlayerOpen('TEAMA','PLAYER2','t1p2')">
+            <ion-img src="/../assets/images/qimage.jpg" class="friend_img_2"></ion-img>
+          </ion-avatar>
+          <ion-text class="name_2">
+            {{t1p2.username}}
+          </ion-text>
+        </div>
+      </ion-col>
+      <ion-col class="text-center">
+        <div class="preph">
+          <p class="or">OR</p>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="preph">
+          <ion-avatar (click)="selPlayerOpen('TEAMB','PLAYER1','t2p1')">
+            <ion-img src="/../assets/images/qimage.jpg" class="friend_img_2"></ion-img>
+          </ion-avatar>
+          <ion-text class="name_2">
+            {{t2p1.username}}
+          </ion-text>
+        </div>
+      </ion-col>
+      <ion-col *ngIf="dis4">
+        <div class="preph">
+          <ion-avatar (click)="selPlayerOpen('TEAMB','PLAYER2','t2p2')">
+            <ion-img src="/../assets/images/qimage.jpg" class="friend_img_2"></ion-img>
+          </ion-avatar>
+          <ion-text class="name_2">
+            {{t2p2.username}}
+          </ion-text>
+        </div>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+
+  <ion-button size="large" *ngIf="showContinue && owner == user.email" (click)="gtGame()" expand="block">Continue
+  </ion-button>
+
+
+
+  <ion-grid>
+    <ion-row class="pad_bottom" (click)="shareAlert()">
+      <ion-col class="bg_black">
+        <ion-img src="/../assets/images/download.png" class="img_width"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

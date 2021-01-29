@@ -1,0 +1,607 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col class="ion-align-self-start">
+        <ion-row>
+          <a routerLink="/buy/pass">
+            <ion-img class="header-icons" src="./assets/images/plus.png"></ion-img>
+          </a>
+          <ion-img src="./assets/images/pass-new.png"></ion-img>
+          <ion-label class="number-position">{{this.user.gameprofile.pass}}</ion-label>
+        </ion-row>
+      </ion-col>
+      <!--<ion-col>
+				<ion-row>
+					<a routerLink="/buy/pass"><ion-img class="header-icons" src="./assets/images/plus.png"></ion-img></a>
+					<ion-img src="./assets/images/hints-new.png"></ion-img>
+					<ion-label class="number-position">{{this.user.gameprofile.hinto}}</ion-label>
+				</ion-row>
+			</ion-col>-->
+      <ion-col>
+        <ion-row>
+          <a routerLink="/buy/freezo">
+            <ion-img class="header-icons" src="./assets/images/plus.png"></ion-img>
+          </a>
+          <ion-img class="" src="./assets/images/time-freezo.png"></ion-img>
+          <ion-label class="number-position"> {{this.user.gameprofile.freezo}} </ion-label>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <a routerLink="/buy/reverse">
+            <ion-img class="header-icons" src="./assets/images/plus.png"></ion-img>
+          </a>
+          <ion-img class="" src="./assets/images/reverse-power.png"></ion-img>
+          <ion-label class="number-position"> {{this.user.gameprofile.reverse}} </ion-label>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <a routerLink="/buy/shop">
+            <ion-img class="header-icons" src="./assets/images/plus.png"></ion-img>
+          </a>
+          <ion-img class="" src="./assets/images/coin-new.png"></ion-img>
+          <ion-label class="number-position"> {{this.user.gameprofile.coins}} </ion-label>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" class="background">
+  <ion-grid>
+    <ion-row class="first__section">
+      <ion-col col-4 class="ion-align-self-start" t>
+        <ion-img class="crown_icon" src="./assets/images/crown2.png"></ion-img>
+        <ion-avatar>
+          <a routerLink="/profile">
+            <ion-img class="profile-img" src="./assets/images/user1.jpg"></ion-img>
+          </a>
+        </ion-avatar>
+        <ion-progress-bar value="0.5" color="warning" class="progress-bar"></ion-progress-bar>
+      </ion-col>
+      <ion-col col-4>
+        <ion-img class="logo" src="./assets/images/guesswat-logo-new.png"></ion-img>
+      </ion-col>
+      <ion-col col-4>
+        <ion-img routerLink="/setting" class="treasure-icon setting-icon1" src="./assets/images/settingicon.png">
+        </ion-img>
+      </ion-col>
+      <!--<ion-col col-4>
+	        <ion-img class="treasure-icon" src="./assets/images/creaticon.png"></ion-img>
+	        <p>15</p>
+	    	</ion-col>-->
+    </ion-row>
+  </ion-grid>
+  <ion-row>
+    <ion-col col-12 class="addButtonContent" routerLink="/catchphrase-preplay">
+      <ion-row>
+        <ion-img src="assets/images/play-icon.png" class="buttonCatchphrase"></ion-img>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <!--<ion-row>
+    <ion-col col-12 class="secondary__linear">
+      <strong> Dear Dane,</strong> Verify your email ID
+      <ion-icon ios="ios-close" class="close-icon" md="md-close"></ion-icon>
+    </ion-col>
+  </ion-row>-->
+
+  <!--<ion-row>
+    <ion-col col-12 class="secondary__linear">
+
+      <ion-row class="no-padding">
+        <ion-col col-2 class="no-padding">
+          <ion-img src="assets/images/arena.png" class="arena__image"></ion-img>
+        </ion-col>
+
+        <ion-col col-10 class="" style="display: contents;">
+          <ion-avatar class="avatar">
+            <ion-img src="assets/images/alert-img.png" class="user__image__round"></ion-img>
+          </ion-avatar>
+
+          <ion-avatar class="avatar">
+            <ion-img src="assets/images/alert-img.png" class="user__image__round"></ion-img>
+          </ion-avatar>
+          <p>have joined the $name arena </p>
+        </ion-col>
+      </ion-row>
+      <ion-icon name="close" class="close-icon"></ion-icon>
+    </ion-col>
+  </ion-row>-->
+
+  <!-- <ion-row>
+    <ion-col col-12 class="linear__gradient__fb">
+      <div class="white__background">
+        <ion-row (click)="loginFB()">
+          <ion-col col-2 class="no-padding">
+            <ion-img src="assets/images/fb_only.png" class="fb__icon"></ion-img>
+          </ion-col>
+          <ion-col col-2 class="column_fb">
+            <ion-img src="assets/images/fb_text.png" class="facebook__text"></ion-img>
+            <p> Play and watch your friends playing </p>
+          </ion-col>
+          <ion-col col-8 class="coin_icon">
+            <ion-img src="assets/images/1000_coin.png" class="coin__image"></ion-img>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row class="game__button">
+    <ion-col col-6 class="no-padding">
+      <ion-img src="assets/images/catchphrase2.png"></ion-img>
+    </ion-col>
+
+    <ion-col col-6 class="no-padding">
+      <ion-img src="assets/images/password2.png"></ion-img>
+    </ion-col>
+  </ion-row>
+
+  <ion-grid class="users-list">
+    <ion-grid>
+      <ion-row class="ion-align-items-start">
+        <ion-col class="friend-head" size="12">
+          <h2>MY FRIENDS</h2>
+        </ion-col>
+        <ion-slides [options]="sliderConfig3" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
+
+        <ion-slides style="margin: 0;padding: 0 15px;" [options]="sliderConfig" pager="true" #slider
+          (ionSlidesDidLoad)="slidesDidLoad(slider)">
+          <ion-slide ion-col col-4 class="slider-hieght1">
+            <ion-row>
+              <ion-col class="slider__section">
+                <ion-avatar class="box-2">
+                  <ion-img src="assets/images/friend1.png"></ion-img>
+                </ion-avatar>
+                <h5>$username</h5>
+                <p><strong>Activity</strong></p>
+                <p class="jointime">10 sec ago</p>
+              </ion-col>
+            </ion-row>
+          </ion-slide>
+          <ion-slide ion-col col-4 class="slider-hieght1">
+            <ion-row>
+              <ion-col class="slider__section">
+                <ion-avatar class="box-2">
+                  <ion-img src="assets/images/alert-img.png"></ion-img>
+                </ion-avatar>
+                <h5>$username</h5>
+                <p><strong>Activity</strong></p>
+                <p class="jointime">10 sec ago</p>
+              </ion-col>
+            </ion-row>
+          </ion-slide>
+
+          <ion-slide ion-col col-4 class="slider-hieght1">
+            <ion-row>
+              <ion-col class="slider__section">
+                <ion-avatar class="box-2">
+                  <ion-img src="assets/images/user1.jpg"></ion-img>
+                </ion-avatar>
+                <h5>$username</h5>
+                <p><strong>Activity</strong></p>
+                <p class="jointime">10 sec ago</p>
+              </ion-col>
+            </ion-row>
+          </ion-slide>
+
+          <ion-slide ion-col col-4 class="slider-hieght1">
+            <ion-row>
+              <ion-col class="slider__section">
+                <ion-avatar class="box-2">
+                  <ion-img src="assets/images/user1.jpg"></ion-img>
+                </ion-avatar>
+                <h5>$username</h5>
+                <p><strong>Activity</strong></p>
+                <p class="jointime">10 sec ago</p>
+              </ion-col>
+            </ion-row>
+          </ion-slide>
+
+          <ion-slide ion-col col-4 class="slider-hieght1">
+            <ion-row>
+              <ion-col class="slider__section">
+                <ion-avatar class="box-2">
+                  <ion-img src="assets/images/user1.jpg"></ion-img>
+                </ion-avatar>
+                <h5>$username</h5>
+                <p><strong>Activity</strong></p>
+                <p class="jointime">10 sec ago</p>
+              </ion-col>
+            </ion-row>
+          </ion-slide>
+
+        </ion-slides>
+        <ion-icon name="arrow-dropright-circle" class="slider-arrow1" (click)="swipeNext()"></ion-icon>
+      </ion-row>
+    </ion-grid>
+  </ion-grid> -->
+
+  <!--<ion-grid class="users-list">
+      <ion-grid>
+        <ion-row class="ion-align-items-start">
+          <ion-col class="friend-head" size="12">
+            <h2>Recommended challenges</h2>
+          </ion-col>
+          <ion-slides style="margin: 0;padding: 0 15px;" [options]="sliderConfig2" pager="true" #slider2
+            (ionSlidesDidLoad)="slidesDidLoad2(slider2)">
+            <ion-slide ion-col col-4 class="slider-hieght1">
+              <ion-row>
+                <ion-col class="slider__section">
+                  <ion-avatar class="box-2">
+                    <ion-img src="assets/images/friend1.png"></ion-img>
+                  </ion-avatar>
+                  <h5>$username</h5>
+                  <p><strong>Activity</strong></p>
+                  <p class="jointime">10 sec ago</p>
+                </ion-col>
+              </ion-row>
+            </ion-slide>
+            <ion-slide ion-col col-4 class="slider-hieght1">
+              <ion-row>
+                <ion-col class="slider__section">
+                  <ion-avatar class="box-2">
+                    <ion-img src="assets/images/alert-img.png"></ion-img>
+                  </ion-avatar>
+                  <h5>$username</h5>
+                  <p><strong>Activity</strong></p>
+                  <p class="jointime">10 sec ago</p>
+                </ion-col>
+              </ion-row>
+            </ion-slide>
+  
+            <ion-slide ion-col col-4 class="slider-hieght1">
+              <ion-row>
+                <ion-col class="slider__section">
+                  <ion-avatar class="box-2">
+                    <ion-img src="assets/images/user1.jpg"></ion-img>
+                  </ion-avatar>
+                  <h5>$username</h5>
+                  <p><strong>Activity</strong></p>
+                  <p class="jointime">10 sec ago</p>
+                </ion-col>
+              </ion-row>
+            </ion-slide>
+  
+            <ion-slide ion-col col-4 class="slider-hieght1">
+              <ion-row>
+                <ion-col class="slider__section">
+                  <ion-avatar class="box-2">
+                    <ion-img src="assets/images/user1.jpg"></ion-img>
+                  </ion-avatar>
+                  <h5>$username</h5>
+                  <p><strong>Activity</strong></p>
+                  <p class="jointime">10 sec ago</p>
+                </ion-col>
+              </ion-row>
+            </ion-slide>
+  
+            <ion-slide ion-col col-4 class="slider-hieght1">
+              <ion-row>
+                <ion-col class="slider__section">
+                  <ion-avatar class="box-2">
+                    <ion-img src="assets/images/user1.jpg"></ion-img>
+                  </ion-avatar>
+                  <h5>$username</h5>
+                  <p><strong>Activity</strong></p>
+                  <p class="jointime">10 sec ago</p>
+                </ion-col>
+              </ion-row>
+            </ion-slide>
+  
+          </ion-slides>
+          <ion-icon name="arrow-dropright-circle" class="slider-arrow1" (click)="swipeNext2()"></ion-icon>
+        </ion-row>
+      </ion-grid>
+  </ion-grid> -->
+
+  <!-- <ion-grid class="users-list">
+    <ion-row>
+      <ion-col class="friend-head" size="12">
+        <h2>MATCH OF THE DAY</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="box">
+        <h6>$Title1</h6>
+        <ion-row>
+          <ion-col size="6">
+            <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+          </ion-col>
+          <ion-col size="6">
+            <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+          </ion-col>
+          <ion-col size="6">
+            <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row class="botton-box">
+          <p class="para-center">Watch Now</p>
+        </ion-row>
+      </ion-col>
+      <ion-col class="box">
+        <h6>$Title1</h6>
+        <ion-row>
+          <ion-col size="6">
+            <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+          </ion-col>
+          <ion-col size="6">
+            <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+          </ion-col>
+          <ion-col size="6">
+            <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row class="botton-box">
+          <p class="para-center">Watch Now</p>
+        </ion-row>
+      </ion-col>
+      <ion-col class="box">
+        <h6>$Title1</h6>
+        <ion-row>
+          <ion-col size="6">
+            <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+          </ion-col>
+          <ion-col size="6">
+            <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+          </ion-col>
+          <ion-col size="6">
+            <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row class="botton-box">
+          <p class="para-center">Watch Now</p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+  <!--<ion-grid class="no-padding">
+    <ion-row>
+      <ion-col col-12 class="users-list">
+        <ion-row>
+          <h2> Request for another clue </h2>
+        </ion-row>
+
+        <ion-row class="white__back">
+          <ion-col col-2 class="description">
+            <div class="cluenumber">7</div>
+            <ion-avatar>
+              <ion-img routerLink="/offline-challenge" src="assets/images/user1.jpg"></ion-img>
+            </ion-avatar>
+          </ion-col>
+          <ion-col col-8>
+            <h5>Grace T.</h5>
+            <p>Their move<br>
+              40 min ago</p>
+          </ion-col>
+          <ion-col col-2>
+            <ion-icon class="circle__icon" ios="ios-close-circle-outline" md="md-close-circle-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="white__back">
+          <ion-col col-2 class="description">
+            <div class="cluenumber">7</div>
+            <ion-avatar>
+              <ion-img routerLink="/offline-challenge" src="assets/images/user1.jpg"></ion-img>
+            </ion-avatar>
+          </ion-col>
+          <ion-col col-8>
+            <h5>Grace T.</h5>
+            <p>Their move<br>
+              40 min ago</p>
+          </ion-col>
+          <ion-col col-2>
+            <ion-icon class="circle__icon" ios="ios-close-circle-outline" md="md-close-circle-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="white__back">
+          <ion-col col-2 class="description">
+            <div class="cluenumber">7</div>
+            <ion-avatar>
+              <ion-img routerLink="/offline-challenge" src="assets/images/user1.jpg"></ion-img>
+            </ion-avatar>
+          </ion-col>
+          <ion-col col-8>
+            <h5>Grace T.</h5>
+            <p>Their move<br>
+              40 min ago</p>
+          </ion-col>
+          <ion-col col-2>
+            <ion-icon class="circle__icon" ios="ios-close-circle-outline" md="md-close-circle-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="white__back">
+          <ion-col col-2 class="description">
+            <div class="cluenumber">7</div>
+            <ion-avatar>
+              <ion-img routerLink="/offline-challenge" src="assets/images/user1.jpg"></ion-img>
+            </ion-avatar>
+          </ion-col>
+          <ion-col col-8>
+            <h5>Grace T.</h5>
+            <p>Their move<br>
+              40 min ago</p>
+          </ion-col>
+          <ion-col col-2>
+            <ion-icon class="circle__icon" ios="ios-close-circle-outline" md="md-close-circle-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+  <!-- <ion-grid style="margin-bottom: 4rem;" class="users-list">
+    <ion-row>
+      <ion-col class="friend-head" size="12">
+        <h2>WATCH LIVE MATCH</h2>
+      </ion-col>
+    </ion-row>
+    <ion-grid>
+      <ion-row class="ion-align-items-start">
+        <ion-slides [options]="sliderConfig3" pager="true" #slider3 (ionSlidesDidLoad)="slidesDidLoad3(slider3)">
+          <ion-slide ion-col col-4 class="slider-hieght">
+            <ion-row>
+              <ion-col class="box-2">
+                <h6>$Title1</h6>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+                  </ion-col>
+                </ion-row>
+                <ion-row class="botton-box">
+                  <p class="para-center">Watch Now</p>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-slide>
+
+          <ion-slide ion-col col-4 class="slider-hieght">
+            <ion-row class="">
+              <ion-col class="box-2">
+                <h6>$Title1</h6>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+                  </ion-col>
+                </ion-row>
+                <ion-row class="botton-box">
+                  <p class="para-center">Watch Now</p>
+                </ion-row>
+              </ion-col>
+
+            </ion-row>
+          </ion-slide>
+
+          <ion-slide ion-col col-4 class="slider-hieght">
+            <ion-row class="">
+
+              <ion-col class="box-2">
+                <h6>$Title1</h6>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+                  </ion-col>
+                </ion-row>
+                <ion-row class="botton-box">
+                  <p class="para-center">Watch Now</p>
+                </ion-row>
+              </ion-col>
+
+            </ion-row>
+          </ion-slide>
+
+          <ion-slide ion-col col-4 class="slider-hieght">
+            <ion-row class="">
+
+              <ion-col class="box-2">
+                <h6>$Title1</h6>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user1.jpg"></ion-img>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-img class="img-users" src="./assets/images/user2.jpg"></ion-img>
+                  </ion-col>
+                </ion-row>
+                <ion-row class="botton-box">
+                  <p class="para-center">Watch Now</p>
+                </ion-row>
+              </ion-col>
+
+            </ion-row>
+          </ion-slide>
+
+        </ion-slides>
+        <ion-icon name="arrow-dropright-circle" class="slider-arrow" (click)="swipeNext3()"></ion-icon>
+      </ion-row>
+      <ion-row>
+
+      </ion-row>
+    </ion-grid>
+  </ion-grid> -->
+
+
+
+  <ion-footer class="footer__image__section">
+    <ion-row>
+      <ion-col col-3>
+        <ion-img (click)="gtCoins()" src="assets/images/footer-buycoins.png" class="footer_images"></ion-img>
+      </ion-col>
+      <ion-col col-3>
+        <ion-img routerLink="/catchphrase-preplay" src="assets/images/footer-password.png" class="footer_images">
+        </ion-img>
+      </ion-col>
+      <ion-col col-3>
+        <ion-img routerLink="/catchphrase-preplay" src="assets/images/footer-catchphrase.png" class="footer_images">
+        </ion-img>
+      </ion-col>
+      <ion-col col-3>
+        <ion-img (click)="arenaOptions()" src="assets/images/footer-arena.png" class="footer_images"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
+
+</ion-content>

@@ -1,0 +1,277 @@
+:host {
+  ion-content {
+    --background: url("/../assets/images/bg-patern.png");
+    background-size: cover;
+    background-position: center center;
+  }
+}
+ion-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  bottom: 100%;
+}
+ion-header ion-toolbar {
+  --background: url("/../assets/images/mobile-header-bg.png") no-repeat center center / 100% 100% !important;
+}
+.hight_header {
+  height: 80px;
+}
+.play_btn {
+  width: 65px;
+}
+.timer_btn {
+  width: 57px;
+}
+.user_img_2 {
+  border-radius: 15px !important;
+  border: 1px solid #f1f1f1 !important;
+  width: 55px;
+  margin-top: -12px;
+  height: 55px;
+  position: relative;
+}
+.crown_img_2 {
+  position: absolute;
+  width: 35px;
+  top: -4px;
+  left: 15px;
+}
+.text_set_2 {
+  border: 1px solid #f3f3f3;
+  padding: 5px;
+  background-color: #e72105;
+  color: #fff;
+  border-radius: 50%;
+  position: relative;
+  top: 16px;
+  right: -65px;
+  text-align: center;
+  z-index: 9;
+  font-size: 8px;
+}
+.white {
+  color: #fff;
+}
+.row_pad_2 {
+  padding: 10px;
+  margin-top: 120px;
+  padding-bottom: 125px;
+}
+.friend_img {
+  display: inline-block;
+  border-radius: 20px;
+  border: 3px solid #fff;
+  width: 110px;
+  position: relative;
+  height: 110px;
+}
+.verticaldivider {
+  width: 10px;
+  left: 15px;
+  position: relative;
+  bottom: -112px;
+}
+.crown_img_3 {
+  width: 100px;
+  position: absolute;
+  top: -35px;
+  left: 12px;
+}
+.name {
+  color: white;
+  position: relative;
+  top: 55px;
+  font-size: 18px;
+  left: 8px;
+}
+
+.play_again_button {
+  --border-radius: 10px;
+  display: block;
+  margin: 0px auto;
+  width: 70%;
+  font-size: 16px;
+  font-weight: 600;
+  text-shadow: 0 0 10px #000 !important;
+  --background: linear-gradient(
+    to bottom,
+    rgba(124, 188, 10, 1) 0%,
+    rgba(157, 213, 58, 1) 0%,
+    rgba(255, 255, 255, 1) 2%,
+    rgba(157, 213, 58, 1) 23%,
+    rgba(128, 194, 23, 1) 49%,
+    rgba(128, 194, 23, 1) 49%,
+    rgba(128, 194, 23, 1) 49%,
+    rgba(114, 175, 21, 1) 49%,
+    rgba(108, 193, 17, 1) 100%
+  );
+}
+.score {
+  color: #fff;
+  text-align: center;
+  margin-top: 45px;
+}
+.top_mar {
+  margin-top: 30px;
+}
+.thum_img {
+  width: 85px;
+  float: right;
+}
+.thum_img_2 {
+  width: 85px;
+}
+.home_btn {
+  margin-top: 25px;
+}
+@media only screen and (max-width: 320px) {
+  .user_img_2 {
+    border-radius: 15px !important;
+    border: 1px solid #f1f1f1 !important;
+    width: 45px;
+    height: 45px;
+  }
+  .white {
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    top: -7px;
+  }
+  .play_btn {
+    width: 60px;
+    position: relative;
+    top: -5px;
+  }
+  .text_set_2 {
+    border: 1px solid #f3f3f3;
+    padding: 5px;
+    background-color: #e72105;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 12px;
+    right: -50px !important;
+    text-align: center;
+    z-index: 9;
+    font-size: 8px;
+  }
+  .crown_img_2 {
+    position: absolute;
+    width: 35px;
+    top: -4px;
+    left: 25px !important;
+  }
+  .name {
+    color: white;
+    position: relative;
+    top: 82px !important;
+    font-size: 18px;
+    left: 15px !important;
+  }
+  .verticaldivider {
+    width: 10px;
+    left: 23px !important;
+    position: relative;
+    bottom: -112px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .user_img_2 {
+    width: 46px;
+    height: 46px;
+    left: 15px;
+  }
+  .crown_img_2 {
+    left: 26px;
+  }
+  .text_set_2 {
+    top: 14px;
+    right: -50px;
+  }
+  .friend_img {
+    width: 150px;
+    height: 150px;
+  }
+  .crown_img_3 {
+    left: 30px;
+  }
+  .name {
+    top: 90px;
+    left: 33px;
+  }
+  .verticaldivider {
+    left: 24px;
+  }
+}
+@media only screen and (max-width: 365px) {
+  .crown_img_3 {
+    width: 100px;
+    position: absolute;
+    top: -35px;
+    left: 20px;
+  }
+  .friend_img {
+    display: inline-block;
+    border-radius: 20px;
+    border: 3px solid #fff;
+    width: 125px;
+    position: relative;
+    height: 125px;
+  }
+  .user_img_2 {
+    border-radius: 15px !important;
+    border: 1px solid #f1f1f1 !important;
+    width: 45px;
+    margin-top: -12px;
+    height: 45px;
+    position: relative;
+  }
+  .white {
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    top: -7px;
+  }
+  .play_btn {
+    width: 60px;
+    position: relative;
+    top: -5px;
+  }
+  .text_set_2 {
+    border: 1px solid #f3f3f3;
+    padding: 5px;
+    background-color: #e72105;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 12px;
+    right: -36px;
+    text-align: center;
+    z-index: 9;
+    font-size: 8px;
+  }
+  .crown_img_2 {
+    position: absolute;
+    width: 35px;
+    top: -4px;
+    left: 10px;
+  }
+  .name {
+    color: white;
+    position: relative;
+    top: 65px;
+    font-size: 18px;
+    left: 20px;
+  }
+  .verticaldivider {
+    width: 10px;
+    left: 13px;
+    position: relative;
+    bottom: -112px;
+  }
+}

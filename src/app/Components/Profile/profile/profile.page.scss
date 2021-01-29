@@ -1,0 +1,78 @@
+.background {		
+	.linear-gradient-background {
+		padding: 15px;
+        height: 100%;
+        border-radius: 10px;
+        background: rgb(4,111,158);
+        background: linear-gradient(to right, rgba(4,111,158,1) 1%,rgba(25,153,209,1) 49%,rgba(4,111,158,1) 100%);
+		.dotted__border {
+			border-top: 2px dashed #9BC8DF;
+			border-bottom: 2px dashed #9BC8DF;
+			padding: 5px 0;
+			.no-margin {
+				margin: 0;
+				padding: 0;
+				.profilehd {
+					text-align: center;
+					color: #fff;
+					font-weight: 700;
+					font-size: 15px;
+					text-shadow: 0 0 10px #000;
+					font-family: 'Open Sans', sans-serif;
+					margin: 0;
+					span {
+						font-weight: 900;
+						font-size: 15px;
+						display: block;
+						color: #fae819;
+						font-family: 'Open Sans', sans-serif;
+					}
+				}
+			}
+			.played-with {
+				text-align: center;
+				font-size: 24px;
+				color: #fff;
+				font-weight: 900;
+				text-shadow: 0 0 10px #000;
+				font-family: "Open Sans", sans-serif;
+				margin: 5px;
+			}
+			.no-gutters {
+				display: flex;
+				.col {
+					margin: 0 auto;
+					.preph {
+						width: 50px;
+						ion-img {
+							width: 40px;
+							border: 2px solid #fff;
+							border-radius: 5px;
+							margin: 5px auto;
+						}
+					}
+				}
+			}	
+		}
+	}
+}
+
+@media only screen and (min-width: 350px) and (max-width: 567px) {
+	.username {
+		letter-spacing: 0px !important;
+	}
+}
+
+@media only screen and (min-width: 360px) and (max-width: 567px) {
+	.edit__icon {
+		margin: 0.2rem auto !important;
+	}
+	ion-label {
+		width: 70px !important;
+		margin-left: -0.5rem;
+	}
+	.user_image {
+		margin-top: 0.3rem !important;
+		margin-bottom: 0.2rem !important;
+	}
+}

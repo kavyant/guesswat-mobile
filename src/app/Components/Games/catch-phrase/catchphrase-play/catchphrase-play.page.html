@@ -1,0 +1,359 @@
+<ion-header>
+  <ion-toolbar class="hgt_head">
+    <ion-grid>
+      <ion-row class="header__image">
+
+
+
+        <ion-col size="4" (click)="timersConsole()">
+
+
+          <ion-img *ngIf="(((mainTimer1 ) / round1Duration) * 100) >= 40 "
+            [class.currentRound1]="currentRound == 'Round 1' && freezoActived==false"
+            src="assets/images/green-timer.png"></ion-img>
+
+          <ion-img
+            *ngIf="(((mainTimer1 ) / round1Duration) * 100) < 40 && (((mainTimer1 ) / round1Duration) * 100) > 10"
+            [class.currentRound2]="currentRound == 'Round 1' && freezoActived==false"
+            src="assets/images/yellow-timer.png"></ion-img>
+
+
+          <ion-img *ngIf="(((mainTimer1 ) / round1Duration) * 100) <= 10  "
+            [class.currentRound3]="currentRound == 'Round 1' && freezoActived==false"
+            src="assets/images/orange-timer.png"></ion-img>
+
+
+
+        </ion-col>
+
+
+
+        <ion-col size="4">
+
+          <ion-img *ngIf="(((mainTimer2 ) / round2Duration) * 100) >= 40 "
+            [class.currentRound1]="currentRound == 'Round 2' && freezoActived==false"
+            src="assets/images/green-timer.png"></ion-img>
+
+          <ion-img
+            *ngIf="(((mainTimer2 ) / round2Duration) * 100) < 40 && (((mainTimer2 ) / round2Duration) * 100) > 10"
+            [class.currentRound2]="currentRound == 'Round 2' && freezoActived==false"
+            src="assets/images/yellow-timer.png"></ion-img>
+
+
+          <ion-img *ngIf="(((mainTimer2 ) / round2Duration) * 100) <= 10  "
+            [class.currentRound3]="currentRound == 'Round 2' && freezoActived==false"
+            src="assets/images/orange-timer.png"></ion-img>
+
+
+
+
+
+        </ion-col>
+
+
+
+
+
+
+        <ion-col size="4">
+
+          <ion-img *ngIf="(((mainTimer3 ) / round3Duration) * 100) >= 40  "
+            [class.currentRound1]="currentRound == 'Round 3' && freezoActived==false"
+            src="assets/images/green-timer.png"></ion-img>
+
+          <ion-img
+            *ngIf="(((mainTimer3 ) / round3Duration) * 100) < 40 && (((mainTimer3 ) / round3Duration) * 100) > 10"
+            [class.currentRound2]="currentRound == 'Round 3' && freezoActived==false"
+            src="assets/images/yellow-timer.png"></ion-img>
+
+
+          <ion-img *ngIf="(((mainTimer3 ) / round3Duration) * 100) <= 10 "
+            [class.currentRound3]="currentRound == 'Round 3' && freezoActived==false"
+            src="assets/images/orange-timer.png"></ion-img>
+
+
+
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+  <div class="round" *ngIf="roundNumber">Round {{roundNumber}}</div>
+
+
+  <ion-grid class="top_padding">
+
+    <div class="image__section">
+      <ion-row>
+        <ion-col>
+          <p class="num">12</p>
+          <ion-img src="assets/images/eye.png" class="eye_image"></ion-img>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row *ngIf="!swapTeam">
+        <ion-col col-3 class="four_image_section">
+          <ion-avatar class="slide-in-left-delay">
+            <p class="username">{{t2p1.username}}</p>
+            <p class="username">{{t2p1.role}}</p>
+            <ion-img src="assets/images/user1.jpg" class="user__image"></ion-img>
+          </ion-avatar>
+        </ion-col>
+        <ion-col col-3 class="four_image_section">
+          <div>
+            <ion-img src="assets/images/emoji.png" class="emoji__icon_left"></ion-img>
+          </div>
+        </ion-col>
+        <ion-col col-3 class="four_image_section">
+          <div class="right_image">
+            <ion-img src="assets/images/emoji.png" class="emoji__icon_right"></ion-img>
+          </div>
+        </ion-col>
+        <ion-col col-3 class="four_image_section">
+          <ion-avatar class="slide-in-right-delay">
+            <p class="username">{{t2p2.username}}</p>
+            <p class="username">{{t2p2.role}}</p>
+            <ion-img src="assets/images/alert-img.png" class="user__image"></ion-img>
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="swapTeam">
+        <ion-col col-3 class="four_image_section">
+          <ion-avatar class="slide-in-left-delay">
+            <p class="username">{{t1p1.username}}</p>
+            <p class="username">{{t1p1.role}}</p>
+            <ion-img src="assets/images/user1.jpg" class="user__image"></ion-img>
+          </ion-avatar>
+        </ion-col>
+        <ion-col col-3 class="four_image_section">
+          <div>
+            <ion-img src="assets/images/emoji.png" class="emoji__icon_left"></ion-img>
+          </div>
+        </ion-col>
+        <ion-col col-3 class="four_image_section">
+          <div class="right_image">
+            <ion-img src="assets/images/emoji.png" class="emoji__icon_right"></ion-img>
+          </div>
+        </ion-col>
+        <ion-col col-3 class="four_image_section slide-in-right">
+          <ion-avatar class="slide-in-right-delay">
+            <p class="username">{{t1p2.username}}</p>
+            <p class="username">{{t1p2.role}}</p>
+            <ion-img src="assets/images/alert-img.png" class="user__image"></ion-img>
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+    </div>
+
+
+
+
+    <div class="chatbox">
+
+      <ion-row *ngIf="!swapTeam">
+        <ion-col size="9">
+          <h3>{{t2p1Msgs[t2p1Msgs.length-1]}}</h3>
+        </ion-col>
+        <ion-col size="3">
+          <h2>{{t2p2Msgs[t2p2Msgs.length-1]}}</h2>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="swapTeam">
+        <ion-col size="9" *ngIf="t1p1MsgDisplay">
+          <h3>{{t1p1Msgs[t1p1Msgs.length-1]}}</h3>
+        </ion-col>
+        <ion-col size="3">
+          <h2>{{t1p2Msgs[t1p2Msgs.length-1]}}</h2>
+        </ion-col>
+      </ion-row>
+
+
+    </div>
+
+
+
+
+    <div class="chatbox">
+
+      <ion-grid [hidden]="!displayWord" [class.scale-in-center]="displayWord" [class.scale-out-center]="!displayWord">
+        <ion-row>
+          <ion-col class="mainWord">
+            <p>{{mainWord}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <!-- Word Good for use -->
+
+      <!-- <ion-row *ngIf="freezoActived">
+        <ion-col>
+          <h1 style="color: white;">Freezo Activated</h1>
+        </ion-col>
+      </ion-row> -->
+
+
+
+      <ion-row *ngIf="!swapTeam">
+        <ion-col size="12">
+          <ion-row *ngIf="!swapPlayer">
+            <ion-col size="9" *ngIf="t1p1MsgDisplay">
+              <h3>{{t1p1Msgs[t1p1Msgs.length-1]}}</h3>
+            </ion-col>
+            <ion-col size="3">
+              <h2>{{t1p2Msgs[t1p2Msgs.length-1]}}</h2>
+            </ion-col>
+          </ion-row>
+          <ion-row *ngIf="swapPlayer">
+            <ion-col size="9">
+              <h2>{{t1p2Msgs[t1p2Msgs.length-1]}}</h2>
+            </ion-col>
+            <ion-col size="3" *ngIf="t1p1MsgDisplay">
+              <h3>{{t1p1Msgs[t1p1Msgs.length-1]}}</h3>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="swapTeam">
+        <ion-col size="12">
+          <ion-row *ngIf="!swapPlayer">
+            <ion-col size="9">
+              <h3>{{t2p1Msgs[t2p1Msgs.length-1]}}</h3>
+            </ion-col>
+            <ion-col size="3">
+              <h2>{{t2p2Msgs[t2p2Msgs.length-1]}}</h2>
+            </ion-col>
+          </ion-row>
+          <ion-row *ngIf="swapPlayer">
+
+            <ion-col size="9">
+              <h2>{{t2p2Msgs[t2p2Msgs.length-1]}}</h2>
+            </ion-col>
+            <ion-col size="3">
+              <h3>{{t2p1Msgs[t2p1Msgs.length-1]}}</h3>
+            </ion-col>
+
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+
+
+
+
+
+
+
+
+
+      <ion-row *ngIf="!swapTeam">
+        <ion-col size="3">
+          <ion-avatar *ngIf="!swapPlayer" class="slide-in-left">
+            <ion-img src="assets/images/user1.jpg" class="user__image"></ion-img>
+            <p class="username">{{t1p1.username}}</p>
+            <p class="username">{{t1p1.role}}</p>
+          </ion-avatar>
+
+          <ion-avatar *ngIf="swapPlayer" class="slide-in-left">
+            <ion-img src="assets/images/user1.jpg" class="user__image"></ion-img>
+            <p class="username">{{t1p2.username}}</p>
+            <p class="username">{{t1p2.role}}</p>
+          </ion-avatar>
+
+        </ion-col>
+        <ion-col size="6">
+          <div class="three_image_badge">
+            <div (click)="clickPowerPass()" class="heartbeat">
+              <ion-badge shap="round" color="danger" class="badge__icon">{{user.pass}}</ion-badge>
+              <ion-img src="assets/images/pass-icon.png" class="badge_image"></ion-img>
+            </div>
+            <!-- <div>
+              <ion-badge color="danger" class="badge__icon">62</ion-badge>
+              <ion-img src="assets/images/hints-icon.png" class="badge_image"></ion-img>
+            </div> -->
+            <div class="heartbeat" [class.slide-tl]="freezoActived" (click)="clickFreezo()">
+              <ion-badge color="danger" class="badge__icon">{{user.freezo}}</ion-badge>
+              <ion-img src="assets/images/timr-frezo-icon.png" class="badge_image"></ion-img>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="3">
+          <ion-avatar *ngIf="!swapPlayer" class="slide-in-right">
+            <ion-img src="assets/images/alert-img.png" class="user__image"></ion-img>
+            <p class="username">{{t1p2.username}}</p>
+            <p class="username">{{t1p2.role}}</p>
+          </ion-avatar>
+
+          <ion-avatar *ngIf="swapPlayer" class="slide-in-right">
+            <ion-img src="assets/images/alert-img.png" class="user__image"></ion-img>
+            <p class="username">{{t1p1.username}}</p>
+            <p class="username">{{t1p1.role}}</p>
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+
+
+
+      <ion-row *ngIf="swapTeam">
+        <ion-col size="3">
+          <ion-avatar *ngIf="!swapPlayer" class="slide-in-left">
+            <ion-img src="assets/images/user1.jpg" class="user__image"></ion-img>
+            <p class="username">{{t2p1.username}}</p>
+            <p class="username">{{t2p1.role}}</p>
+          </ion-avatar>
+          <ion-avatar *ngIf="swapPlayer" class="slide-in-left">
+            <ion-img src="assets/images/user1.jpg" class="user__image"></ion-img>
+            <p class="username">{{t2p2.username}}</p>
+            <p class="username">{{t2p2.role}}</p>
+          </ion-avatar>
+        </ion-col>
+        <ion-col size="6">
+          <div class="three_image_badge">
+            <div class="heartbeat">
+              <ion-badge shap="round" color="danger" class="badge__icon">{{user.freezo}}</ion-badge>
+              <ion-img src="assets/images/pass-icon.png" class="badge_image"></ion-img>
+            </div>
+            <!-- <div>
+              <ion-badge color="danger" class="badge__icon">62</ion-badge>
+              <ion-img src="assets/images/hints-icon.png" class="badge_image"></ion-img>
+            </div> -->
+            <div class="heartbeat">
+              <ion-badge color="danger" class="badge__icon">{{user.pass}}</ion-badge>
+              <ion-img src="assets/images/timr-frezo-icon.png" class="badge_image"></ion-img>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="3">
+          <ion-avatar *ngIf="!swapPlayer" class="slide-in-right">
+            <ion-img src="assets/images/alert-img.png" class="user__image"></ion-img>
+            <p class="username">{{t2p2.username}}</p>
+            <p class="username">{{t2p2.role}}</p>
+          </ion-avatar>
+          <ion-avatar *ngIf="swapPlayer" class="slide-in-right">
+            <ion-img src="assets/images/alert-img.png" class="user__image"></ion-img>
+            <p class="username">{{t2p1.username}}</p>
+            <p class="username">{{t2p1.role}}</p>
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+
+      <ion-row [class.fade-in-bottom]="user.teamId == activeTeam"
+        [class.fade-out-bottom]="user.teamId != activeTeam">
+
+
+
+        <!-- <ion-row> -->
+        <div class="chatinput">
+          <ion-input placeholder="enter chat..." [(ngModel)]="chatText"></ion-input>
+          <ion-button color="primary" class="submit_btn" (click)="sendChat()">
+            <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward" class="arrow__input"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-row>
+    </div>
+  </ion-grid>
+</ion-content>

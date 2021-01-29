@@ -1,0 +1,143 @@
+:host {
+	.background {
+		--background: url('/../assets/images/bg-patern.png');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		.top_padding {
+			padding-top: 5rem;
+			h1 {
+				color: #fff;
+				font-size: 0.94rem;
+				font-weight: 900;
+				text-align: center;
+				text-shadow: 0 0 10px #000;
+				font-family: "Open Sans", sans-serif;
+				line-height: 1.8rem;
+			}
+			.chatbox {
+				padding: 0rem 0px 1rem 0;
+				border-top: 3px dashed #7FB9DF;
+				border-bottom: 3px dashed #7FB9DF;
+				margin-bottom: 4.5rem;
+				margin-top: 35px;
+				position: relative;
+				h2,h3 {
+					color: #fff;
+					font-size: 0.94rem;
+					font-weight: 600;
+					font-family: "Open Sans", sans-serif;
+					background: #1c9ed8;
+					padding: 0.75rem 0.75rem;
+					border-radius: 0.55rem;
+					outline: none;
+				}
+				h2:after {
+					content: "";
+					position: absolute;
+					width: 0%;
+					border: 17px solid #1c9ed8;
+					right: 0;
+					left: 20%;
+					bottom: 8%;
+					border-right: 16px solid transparent;
+					border-left: 16px solid transparent;
+					border-bottom: none;
+					transform: translate(10px, 10px);
+					top: 69%;
+				}
+				h3:after {
+					content: "";
+					position: absolute;
+					width: 0%;
+					border: 17px solid #1c9ed8;
+					right: 12%;
+					bottom: 8%;
+					border-right: 16px solid transparent;
+					border-left: 16px solid transparent;
+					border-bottom: none;
+					transform: translate(10px, 10px);
+					top: 66%;
+				}
+				ion-avatar {
+					.user__image {
+						border-radius: 1.3rem;
+						border: 0.22rem solid #fff;
+						outline: none;
+						width: 4.2rem;
+						height: 4.2rem;
+						object-fit: cover;
+					}
+				}
+				.username {
+					text-align: center;
+					color: #fff;
+					font-size: 14px;
+					margin: 4px 0 0 0;
+					display: flex;
+					&--second {
+						position: absolute;
+						right: -2%;
+					}
+				}
+				.chatinput {
+					position: relative;
+					width: 100%;
+					margin-top: 1.5rem;
+					.submit_btn {
+						--border-radius: 7px!important;
+						position: absolute;
+						right: 1%;
+						width: 35px;
+						height: 33px;
+						top: 24%;
+						z-index: 9;
+						.arrow__input {
+							font-size: 25px !important;
+							position: absolute;
+						}
+					}
+					
+					ion-input {
+						border: none;
+						background: #fff;
+						border-radius: 10px;
+						height: 40px;
+						padding: 5px 15px;
+						width: 100%;
+						margin: 20px 0;
+						font-weight: 700;
+					}
+				}
+				.right_image_text {
+					position: absolute;
+					right: 15%;
+				}
+			}
+		}
+	}
+	ion-header {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 1030;
+		bottom: 100%;
+	}
+	ion-header ion-toolbar {
+		--background: url('/../assets/images/mobile-header-bg.png') no-repeat center center / 100% 100% !important;
+	}
+}
+
+ion-title {
+	text-align: center;
+	color: #fff;
+	position: relative;
+	top: 0.6rem;
+}
+
+.arrow_back {
+	margin-left: 0.5rem;
+	width: 12%;
+	position: relative;
+	top: -1rem;
+}

@@ -1,0 +1,106 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>Setting</ion-title>
+		<ion-img routerLink="/index-afterlogin" src="assets/images/backarrow.png" class="arrow_back"></ion-img>
+	</ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+	<ion-grid>
+		<ion-row class="whitecontainer25 margin-row">
+			<ion-col size="7">
+				<p>Sounds</p>
+			</ion-col>
+			<ion-col size="5">
+				<ion-img src="/../assets/images/signal.png" class="signal"></ion-img>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-grid>
+		<ion-row class="whitecontainer25">
+			<ion-col size="7">
+				<p>Alerts</p>
+			</ion-col>
+			<ion-col size="5">
+				<ion-item class="toggle_sec">
+					<ion-toggle slot="start" name="kiwi" color="success" checked></ion-toggle>
+				</ion-item>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-grid>
+		<ion-row class="whitecontainer25">
+			<ion-col size="12">
+				<ion-grid class="tabs">
+					<ion-row class="tab tab-row">
+						<input type="checkbox" id="chck1">
+						<label class="tab-label" for="chck1">Account</label>
+						<ion-text class="tab-content">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
+						</ion-text>
+					</ion-row>
+				</ion-grid>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-grid>
+		<ion-row class="whitecontainer25">
+			<ion-col size="12">
+				<ion-grid class="tabs">
+					<ion-row class="tab tab-row">
+						<input type="checkbox" id="chck2">
+						<label class="tab-label" for="chck2">Language</label>
+						<ion-text class="tab-content">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
+						</ion-text>
+					</ion-row>
+				</ion-grid>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-grid>
+		<ion-row class="whitecontainer25">
+			<ion-col size="12">
+				<ion-grid class="tabs">
+					<ion-row class="tab tab-row">
+						<input type="checkbox" id="chck3">
+						<label class="tab-label" for="chck3">About</label>
+						<ion-text class="tab-content">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
+						</ion-text>
+					</ion-row>
+				</ion-grid>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-grid>
+		<ion-row class="whitecontainer25">
+			<ion-col size="12">
+				<ion-grid class="tabs">
+					<ion-row class="tab tab-row">
+						<input type="checkbox" id="chck4">
+						<label class="tab-label" for="chck4">FAQ</label>
+						<ion-text class="tab-content">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
+						</ion-text>
+					</ion-row>
+				</ion-grid>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<!--<ion-grid>
+		<ion-row>
+			<ion-col>
+				<ion-button class="req_btn" shape="circle">PERSONLA DATA REQUEST<ion-icon name="arrow-dropright-circle"></ion-icon></ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>-->
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<ion-button (click)= "logout()" class="log_btn" shape="circle">LOGOUT<ion-icon name="arrow-dropright-circle"></ion-icon></ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

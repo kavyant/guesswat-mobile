@@ -1,0 +1,135 @@
+.whitecontainer25 {
+	padding-left: 15px;
+	padding-right: 8px;
+	position: relative !important;
+	border-radius: 10px;
+	background: linear-gradient(to right, rgba(4,111,158,1) 1%,rgba(25,153,209,1) 49%,rgba(4,111,158,1) 100%);
+	color: #fff;
+}
+.margin-row {
+	margin-top: 75px;
+}
+.signal {
+	width: 45px;
+	float: right;
+}
+.toggle_sec {
+	--background: transparent;
+	position: absolute;
+	right: -21px;
+}
+input {
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
+}
+
+.tab-row {
+	display:flex;
+	
+	.ion-col {
+		flex:1;
+		
+		&:last-child {
+			margin-left: 1em;
+		}
+	}
+}
+
+.tabs {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.tab {
+	width: 100%;
+	color: white;
+	overflow: hidden;
+
+	&-label {
+		display: flex;
+		justify-content: space-between;
+		padding: 15px 5px 15px 5px;
+		cursor: pointer;
+
+		&::after {
+			content: "❯";
+			width: 1em;
+			height: 1em;
+			text-align: center;
+			-webkit-transition: all 0.35s;
+			transition: all 0.35s;
+			font-size: 25px;
+			position: absolute;
+			right: 0px;
+			top: 20px;
+		}
+	}
+
+	&-content {
+		max-height: 0;
+		padding: 0 1em;
+		transition: all .35s;
+	}
+
+	&-close {
+		display: flex;
+		justify-content: flex-end;
+		padding: 1em;
+		font-size: 0.75em;
+		cursor: pointer;
+	}
+}
+
+input:checked {
+	+ .tab-label {
+
+		&::after {
+			transform: rotate(90deg);
+		}
+	}
+
+	~ .tab-content {
+		max-height: 100vh;
+		padding: 1em;
+		border-top: 1px solid #ccc;
+	}
+}
+
+.req_btn {
+	border: 2px solid #37A304;
+	border-radius: 12px;
+	--vertical-align: middle;
+	--padding-start: 10px;
+	--padding-end: 10px;
+	--background: rgb(124,188,10);
+	--background: linear-gradient(to bottom, rgba(124,188,10,1) 0%,rgba(157,213,58,1) 0%,rgba(255,255,255,1) 2%,rgba(157,213,58,1) 23%,rgba(128,194,23,1) 49%,rgba(128,194,23,1) 49%,rgba(128,194,23,1) 49%,rgba(114,175,21,1) 49%,rgba(108,193,17,1) 100%);
+	text-shadow: 0px 0px 10px #000;
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-family: "Open Sans", sans-serif;
+	height: 40px;
+	width: 80%;
+	display: block;
+	margin: 20px auto;
+}
+
+.log_btn {
+	border: 2px solid #ff3019;
+	border-radius: 12px;
+	--vertical-align: middle;
+	--padding-start: 10px;
+	--padding-end: 10px;
+	--background: rgb(255,176,163);
+	--background: linear-gradient(to bottom, rgba(255,176,163,1) 0%,rgba(255,250,249,1) 4%,rgba(255,133,122,1) 21%,rgba(255,48,25,1) 49%,rgba(234,46,4,1) 50%,rgba(207,4,4,1) 100%);
+	text-shadow: 0px 0px 10px #000;
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-family: "Open Sans", sans-serif;
+	height: 40px;
+	width: 50%;
+	display: block;
+	margin: 10px auto;
+}

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Search Arena</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-searchbar class="search" [(ngModel)]="arenaName" autofocus=true placeholder="Search arena by name" animated
+    showCancelButton="focus" #searchBar (ionChange)="searchArena()">
+  </ion-searchbar>
+
+  <!-- <ion-input clearInput value="clear me"></ion-input> -->
+
+  <!-- <ion-button (click)="searchArena()">Search Arena</ion-button> -->
+
+  <ion-list>
+    <ion-item *ngFor="let a of arenas" (click)="gtArenaRoom(a)">
+      {{a.title}}
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

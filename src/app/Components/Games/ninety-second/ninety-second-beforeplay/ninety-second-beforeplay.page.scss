@@ -1,0 +1,131 @@
+:host {
+  ion-content {
+    --background: url("../../../../../assets/images/bg-patern.png");
+    background-size: cover;
+    background-position: center center;
+  }
+}
+ion-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  bottom: 100%;
+}
+ion-header ion-toolbar {
+  --background: url("../../../../../assets/images/mobile-header-bg.png") no-repeat center center / 100% 100% !important;
+}
+.back_arrow {
+  width: 50px;
+}
+.logo_set {
+  width: 100px;
+  text-align: center;
+  position: relative;
+  top: -6px;
+  left: 10px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 80px;
+  position: relative;
+}
+
+.flex-container > div {
+  width: 100px;
+  margin: 5px;
+  text-align: center;
+}
+.pass_pic {
+  width: 50px;
+}
+.number_font {
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+  top: 15px;
+}
+.add_btn {
+  border: 1px solid #fff;
+  background-color: #fff;
+  font-size: 10px !important;
+  position: relative;
+  top: -12px;
+  left: -16px;
+}
+.user-pic {
+  width: 100px;
+  height: 100px;
+}
+.user-pic-2 {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.users-name {
+  text-align: right;
+  color: #0a6784;
+  font-size: 42px;
+  position: relative;
+  top: 0px;
+  font-weight: 600;
+}
+.users-name2 {
+  color: #0a6784;
+  font-size: 42px;
+  position: relative;
+  top: 0px;
+  font-weight: 600;
+}
+.img-center {
+  display: block;
+  margin: 0px auto;
+}
+.vs-text {
+  text-align: center;
+  font-size: 30px;
+  color: #0a6784;
+  font-weight: 600;
+}
+@media only screen and (max-width: 320px) {
+  .pass_pic {
+    width: 40px;
+  }
+  .number_font {
+    color: #fff;
+    font-size: 8px;
+    position: relative;
+    top: 14px;
+  }
+  .user-pic {
+    width: 80px;
+    height: 80px;
+  }
+  .users-name {
+    text-align: center;
+    color: #0a6784;
+    font-size: 34px;
+    position: relative;
+    top: 0px;
+    font-weight: 600;
+  }
+  .user-pic-2 {
+    width: 80px;
+    height: 80px;
+    float: left;
+  }
+  .users-name2 {
+    color: #0a6784;
+    font-size: 35px;
+    position: relative;
+    top: 0px;
+    font-weight: 600;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .pass_pic {
+    width: 40px;
+  }
+}

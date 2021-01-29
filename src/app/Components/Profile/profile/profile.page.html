@@ -1,0 +1,284 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title> Profile </ion-title>
+		<ion-img routerLink="/index-afterlogin" src="assets/images/backarrow.png" class="arrow_back"></ion-img>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+	<ion-grid>
+		<ion-row>
+			<ion-col size="12">
+				<div class="overlay__background">
+					<div class="dotted__border">
+						<ion-row>
+							<ion-col size="3">
+								<ion-avatar class="text-center">
+									<ion-img src="assets/images/friend2.png" class="user_image"></ion-img>
+									<ion-label (click)="uploadpic()" *ngIf="!showFile"> Edit Pic </ion-label>
+									<input *ngIf="showFile" type="file" id="file" (change)="uploadFile($event.target.files)" multiple>
+            
+								</ion-avatar>
+							</ion-col>
+							<ion-col size="6">
+								<p class="username">{{user.data.user.displayname | titlecase}}<br>
+									<span>Played since {{user.joined_on | date}}</span>
+								</p>
+							</ion-col>
+							<ion-col size="3">
+								<ion-img routerLink="/edit-profile" src="assets/images/edit.png" class="edit__icon">
+								</ion-img>
+							</ion-col>
+						</ion-row>
+					</div>
+					<ion-row class="crown__image">
+						<ion-col col-1 class="group_image">
+							<ion-img src="assets/images/crown2.png"></ion-img>
+						</ion-col>
+						<ion-col col-1 class="group_image">
+							<ion-img src="assets/images/crown2.png"></ion-img>
+						</ion-col>
+						<ion-col col-1 class="group_image">
+							<ion-img src="assets/images/crown2.png"></ion-img>
+						</ion-col>
+						<ion-col col-1 class="group_image">
+							<ion-img src="assets/images/crown2.png"></ion-img>
+						</ion-col>
+						<ion-col col-4 class="center_image">
+							<ion-img src="assets/images/big-crown.png" class="center_image"></ion-img>
+						</ion-col>
+						<ion-col col-1 class="group_image">
+							<ion-img src="assets/images/crown2.png"></ion-img>
+						</ion-col>
+						<ion-col col-1 class="group_image">
+							<ion-img src="assets/images/crown2.png"></ion-img>
+						</ion-col>
+						<ion-col col-1 class="group_image">
+							<ion-img src="assets/images/crown2.png"></ion-img>
+						</ion-col>
+						<ion-col col-1 class="group_image">
+							<ion-img src="assets/images/crown2.png"></ion-img>
+						</ion-col>
+						<P>Present Level <span>{{user.gameprofile.level}}</span> </P>
+					</ion-row>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<ion-grid>
+		<ion-row>
+			<ion-col col-12>
+				<div class="linear-gradient-background">
+					<div class="dotted__border">
+						<ion-img src="assets/images/catchphrase2.png"></ion-img>
+						<ion-row>
+							<ion-col col-6 class="no-margin">
+								<p class="profilehd">Total Matches <span>100</span></p>
+							</ion-col>
+							<ion-col col-6 class="no-margin">
+								<p class="profilehd">Won<span>40</span> </p>
+							</ion-col>
+						</ion-row>
+						<p class="played-with"> You Played with </p>
+						<div class="row no-gutters">
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/user1.jpg" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/alert-img.png" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/friend1.png" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/friend2.png" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/plus2.png" alt=""></ion-img>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<ion-grid>
+		<ion-row>
+			<ion-col col-12>
+				<div class="linear-gradient-background">
+					<div class="dotted__border">
+						<ion-img src="assets/images/passwordbtn.png"></ion-img>
+						<ion-row>
+							<ion-col col-6 class="no-margin">
+								<p class="profilehd">Total Matches <span>100</span></p>
+							</ion-col>
+							<ion-col col-6 class="no-margin">
+								<p class="profilehd">Won<span>40</span> </p>
+							</ion-col>
+						</ion-row>
+						<p class="played-with"> You Played with </p>
+						<div class="row no-gutters">
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/user1.jpg" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/alert-img.png" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/friend1.png" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/friend2.png" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/plus2.png" alt=""></ion-img>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<ion-grid>
+		<ion-row>
+			<ion-col col-12>
+				<div class="linear-gradient-background">
+					<div class="dotted__border">
+						<ion-img src="assets/images/90secondchallengbtn.png"></ion-img>
+						<ion-row>
+							<ion-col col-6 class="no-margin">
+								<p class="profilehd">Total Matches <span>100</span></p>
+							</ion-col>
+							<ion-col col-6 class="no-margin">
+								<p class="profilehd">Won<span>40</span> </p>
+							</ion-col>
+						</ion-row>
+						<p class="played-with"> You Played with </p>
+						<div class="row no-gutters">
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/user1.jpg" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/alert-img.png" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/friend1.png" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/friend2.png" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/plus2.png" alt=""></ion-img>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<ion-grid>
+		<ion-row>
+			<ion-col col-12>
+				<div class="linear-gradient-background">
+					<div class="dotted__border">
+						<ion-img src="assets/images/offlinechallengebtn.png"></ion-img>
+						<ion-row>
+							<ion-col col-6 class="no-margin">
+								<p class="profilehd">Total Matches <span>100</span></p>
+							</ion-col>
+							<ion-col col-6 class="no-margin">
+								<p class="profilehd">Won<span>40</span> </p>
+							</ion-col>
+						</ion-row>
+						<p class="played-with"> You Played with </p>
+						<div class="row no-gutters">
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/user1.jpg" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/alert-img.png" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/friend1.png" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/friend2.png" alt=""></ion-img>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="preph">
+									<ion-img src="assets/images/plus2.png" alt=""></ion-img>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

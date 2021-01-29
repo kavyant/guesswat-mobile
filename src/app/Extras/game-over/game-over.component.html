@@ -1,0 +1,32 @@
+<div class="ion-text-center" *ngIf="!continuegame">
+  <h1>Game Over</h1>
+  <h1><strong>{{winner}}</strong></h1>
+  <h1>{{loser}}</h1>
+</div>
+<div class="ion-text-center" *ngIf="continuegame">
+  <h1>Losers!! Dont lose hope.</h1>
+  <h1><strong>Challenge and win this!!</strong></h1>
+  <h1>Pay us with this button and you get a chance to make a comeback!!</h1>
+</div>
+
+<ion-card class="ion-text-center">
+  <ion-card-header>
+    <ion-card-title>Team A</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <h3>Player 1 : {{t1p1Points}}</h3>
+    <h3 *ngIf="gameName == 'catchphrase' || gameName == 'password'">Player 2 : {{t1p2Points}}</h3>
+  </ion-card-content>
+</ion-card>
+<ion-card class="ion-text-center">
+  <ion-card-header>
+    <ion-card-title>Team B</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <h3>Player 1 : {{t2p1Points}}</h3>
+    <h3 *ngIf="gameName == 'catchphrase' || gameName == 'password'">Player 2 : {{t2p2Points}}</h3>
+  </ion-card-content>
+</ion-card>
+<ion-footer>
+  <ion-button fill="clear" class="ion-float-right" (click)="destroyObject()">Go to Arena</ion-button>
+</ion-footer>

@@ -1,0 +1,207 @@
+:host {
+  ion-content {
+    --background: url("/../assets/images/bg-patern.png");
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+ion-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  bottom: 100%;
+  ion-toolbar {
+    ion-title {
+      text-align: center;
+      color: #fff;
+      margin-top: -0.5rem;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      font-family: "Open Sans", sans-serif;
+    }
+  }
+}
+
+ion-header ion-toolbar {
+  --background: url("/../assets/images/mobile-header-bg.png") no-repeat center center / 100% 100% !important;
+}
+
+.play_btn {
+  width: 50px;
+}
+
+.timer_btn {
+  width: 57px;
+}
+
+.user_img_2 {
+  border-radius: 15px !important;
+  border: 1px solid #f1f1f1 !important;
+  width: 55px;
+  margin-top: -12px;
+  height: 55px;
+  position: relative;
+}
+
+.crown_img_2 {
+  position: absolute;
+  width: 35px;
+  top: -4px;
+  left: 15px;
+}
+
+.text_set_2 {
+  border: 1px solid #f3f3f3;
+  padding: 5px;
+  background-color: #e72105;
+  color: #fff;
+  border-radius: 50%;
+  position: relative;
+  top: 18px;
+  right: -43px;
+  text-align: center;
+  z-index: 9;
+  font-size: 12px;
+}
+
+.white {
+  color: #fff;
+  text-align: center;
+}
+
+.top_padding {
+  margin-top: 130px;
+}
+
+.top_padding_2 {
+  margin-top: 115px;
+  .vs_img {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: -50%;
+    left: 10px;
+  }
+}
+
+.friend_img {
+  display: inline-block;
+  border-radius: 20px;
+  border: 3px solid #fff;
+  width: 120px;
+  position: relative;
+  height: 120px;
+}
+
+.verticaldivider {
+  width: 1rem;
+  height: 140px !important;
+  margin-left: 17px;
+}
+
+.crown_img_4 {
+  left: 65px;
+  top: -30px;
+  width: 85px;
+  position: absolute;
+}
+
+.name-title {
+  color: white;
+  position: relative;
+  top: 65px;
+  font-size: 16px;
+  left: 4px;
+}
+.img_5 {
+  display: table;
+  margin: 0px auto;
+}
+@media only screen and (max-width: 320px) {
+  .white {
+    font-size: 18px;
+    top: -5px;
+    position: relative;
+  }
+  .play_btn {
+    width: 50px;
+  }
+  .user_img_2 {
+    width: 45px;
+    height: 45px;
+  }
+  .text_set_2 {
+    position: relative;
+    top: 15px;
+    right: -36px;
+    z-index: 9;
+  }
+  .crown_img_2 {
+    position: absolute;
+    width: 35px;
+    top: -4px;
+    left: 12px;
+  }
+  .name-title {
+    left: 20px !important;
+    top: 55px !important;
+  }
+  .verticaldivider {
+    left: 14px;
+  }
+  .friend_img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 385px) {
+  ion-header {
+    ion-toolbar {
+      ion-title {
+        font-size: 15px !important;
+      }
+    }
+  }
+  .friend_img {
+    width: 135px;
+    height: 135px;
+  }
+  .top_padding_2 .vs_img {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: -50%;
+    left: 12px;
+  }
+  .name-title {
+    top: 75px;
+    left: 26px;
+  }
+}
+@media only screen and (min-width: 381px) and (max-width: 420px) {
+  .friend_img {
+    width: 155px;
+    height: 155px;
+  }
+  .name-title {
+    top: 90px;
+    left: 40px;
+  }
+  .verticaldivider {
+    width: 1rem;
+    height: 140px !important;
+    margin-left: 20px;
+  }
+  .top_padding_2 .vs_img {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: -50%;
+    left: 15px;
+  }
+}

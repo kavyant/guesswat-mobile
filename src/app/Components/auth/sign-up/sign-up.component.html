@@ -1,0 +1,248 @@
+<ion-content class="background">
+  <ion-row>
+    <ion-col col-12>
+      <ion-img class="logo" src="./assets/images/loadinglogogw.png"></ion-img>
+    </ion-col>
+  </ion-row>
+  <ion-grid class="background__color">
+    <ion-row class="form__section">
+      <ion-col col-12 class="col-space">
+        <!-- <ion-list>
+          <ion-item>
+            <ion-label>Select Language</ion-label>
+            <ion-select placeholder="Select One" [(ngModel)]="selectedLanguage" (ionChange)="languageChanged()">
+              <ion-select-option value="en">English</ion-select-option>
+              <ion-select-option value="es">Spanish</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list> -->
+
+        <form [formGroup]="userForm" #formDir="ngForm">
+          <!-- Date of birth -->
+          <div class="form-group" *ngIf="showdob">
+            <label for="dob">{{ 'Ask_dob' | translate }}</label>
+            <!-- <input id="dob" class="form-control datepicker" formControlName="dob"  placeholder="Enter Your DOB" autocomplete="off" required/> -->
+            <ion-datetime displayFormat="MM/DD/YYYY" formControlName="dob" class="form-control"
+              placeholder="Date of birth"></ion-datetime>
+            <div *ngIf="userForm.controls.dob.invalid && (userForm.controls.dob.dirty || userForm.controls.dob.touched)"
+              class="alert alert-danger">
+              <div *ngIf="userForm.controls.dob.errors.required"> DOB is required.</div>
+            </div>
+          </div>
+          <!--see returning player  -->
+          <div class="showButton" *ngIf="showButton">
+            <div class="form-group btnwrapper text-left">
+              <ion-button type="submit" class="login__button" style="color:red"> <a routerLink="/auth/login"> Returning
+                  Player </a>
+                <ion-img src="assets/images/loader.gif" *ngIf="showLoaderImg" class="loadingimg"></ion-img>
+              </ion-button>
+            </div>
+
+            <div class="form-group btnwrapper text-left">
+              <ion-button type="submit" class="login__button" (click)="continueFormPage()"> New PLayer <ion-img
+                  src="assets/images/loader.gif" *ngIf="showLoaderImg" class="loadingimg"></ion-img>
+              </ion-button>
+            </div>
+          </div>
+          <!-- Display Name and Gender -->
+          <div class="showPage3" *ngIf="showPage3">
+            <div class="form-group">
+              <label for="displayname">{{ 'username' | translate }}</label>
+              <input id="displayname" class="form-control" formControlName="displayname"
+                placeholder="Enter Your Display Name" required>
+              <div
+                *ngIf="userForm.controls.displayname.invalid && (userForm.controls.displayname.dirty || userForm.controls.displayname.touched)"
+                class="alert alert-danger">
+                <div *ngIf="userForm.controls.displayname.errors.required"> User Name is required.</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="gender">{{ 'ask_gender' | translate }}</label>
+              <select id="gender" class="form-control" formControlName="gender">
+                <option value="" selected>Select Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+              <div
+                *ngIf="userForm.controls.gender.invalid && (userForm.controls.gender.dirty || userForm.controls.gender.touched)"
+                class="alert alert-danger">
+                <div *ngIf="userForm.controls.gender.errors.required"> Gender is required.</div>
+              </div>
+            </div>
+          </div>
+          <!-- fb login and login with mail -->
+          <div class="page4" *ngIf="showPage4">
+              <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                      <div (click)="fbLogin()">
+                          <ion-col col-2 class="no-padding">
+                            <ion-img src="assets/images/fb_btn.png" class="fb__icon"></ion-img>
+                          </ion-col>
+                      </div>
+                    </ion-col>
+                    <ion-col>
+                      <div>
+                          <div class="btnwrapper text-left marg">
+                            <ion-button type="submit" class="login__button heaght" (click)="continueFormEmail()"> Login with Email <ion-img
+                                src="assets/images/loader.gif" *ngIf="showLoaderImg" class="loadingimg"></ion-img>
+                            </ion-button>
+                          </div>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              
+          </div>
+          <!-- email and password -->
+          <div class="page5" *ngIf="showPage5">
+              <div class="form-group">
+                  <label for="email">{{ 'email' | translate }}</label>
+                  <input id="email" class="form-control" formControlName="email" placeholder="Enter Your Email" required />
+                  <div
+                    *ngIf="userForm.controls.email.invalid && (userForm.controls.email.dirty || userForm.controls.email.touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="userForm.controls.email.errors.required"> Email is required.</div>
+                    <div *ngIf="userForm.controls.email.errors.email"> Email is not valid.</div>
+                    <div *ngIf="userForm.controls.email.errors.isEmailUnique">This email has been registered already</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">{{ 'password' | translate }}</label>
+                    <input id="password" type="password" class="form-control" formControlName="password"
+                      placeholder="Enter Password" required>
+        
+                    <div
+                      *ngIf="userForm.controls.password.invalid && (userForm.controls.password.dirty || userForm.controls.password.touched)"
+                      class="alert alert-danger">
+                      <div *ngIf="userForm.controls.password.errors.required"> Password is required.</div>
+                      <div *ngIf="userForm.controls.password.errors.minlength"> Password must be at least 6 characters long.
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="confirm_password">{{ 'retype_password' | translate }}</label>
+                    <input id="confirm_password" type="password" class="form-control" formControlName="confirm_password"
+                      placeholder="Re-enter Password" required>
+        
+                    <div
+                      *ngIf="userForm.controls.confirm_password.invalid && (userForm.controls.confirm_password.dirty || userForm.controls.confirm_password.touched)"
+                      class="alert alert-danger">
+                      <div *ngIf="userForm.controls.confirm_password.errors.required"> Confirm Password is required.</div>
+                      <div *ngIf="userForm.controls.confirm_password.errors.minlength"> Confirm Password must be at least 6
+                        characters long.</div>
+        
+                    </div>
+                    <div *ngIf="userForm.controls.confirm_password.touched && userForm.hasError('validConfirmPassword')"
+                      class="alert alert-danger">
+                      <div *ngIf="userForm.hasError('validConfirmPassword')">Confirm Your Password.</div>
+                    </div>
+                  </div>
+          </div>
+          <!-- continue button -->
+          <div class="btnwrapper text-left" *ngIf="!showButton && !showPage5">
+            <ion-button type="submit" class="login__button" (click)="continueForm()"> Continue <ion-img
+                src="assets/images/loader.gif" *ngIf="showLoaderImg" class="loadingimg"></ion-img>
+            </ion-button>
+          </div>
+          <!-- <div class="form-group">
+            <label for="displayname">{{ 'username' | translate }}</label>
+            <input id="displayname" class="form-control" formControlName="displayname"
+              placeholder="Enter Your Display Name" required>
+            <div
+              *ngIf="userForm.controls.displayname.invalid && (userForm.controls.displayname.dirty || userForm.controls.displayname.touched)"
+              class="alert alert-danger">
+              <div *ngIf="userForm.controls.displayname.errors.required"> User Name is required.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">{{ 'email' | translate }}</label>
+            <input id="email" class="form-control" formControlName="email" placeholder="Enter Your Email" required />
+            <div
+              *ngIf="userForm.controls.email.invalid && (userForm.controls.email.dirty || userForm.controls.email.touched)"
+              class="alert alert-danger">
+              <div *ngIf="userForm.controls.email.errors.required"> Email is required.</div>
+              <div *ngIf="userForm.controls.email.errors.email"> Email is not valid.</div>
+              <div *ngIf="userForm.controls.email.errors.isEmailUnique">This email has been registered already</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">{{ 'Ask_dob' | translate }}</label>
+            <input id="dob" class="form-control datepicker" formControlName="dob"  placeholder="Enter Your DOB" autocomplete="off" required/>
+            <ion-datetime displayFormat="MM/DD/YYYY" formControlName="dob" class="form-control"
+              placeholder="Date of birth"></ion-datetime>
+            <div *ngIf="userForm.controls.dob.invalid && (userForm.controls.dob.dirty || userForm.controls.dob.touched)"
+              class="alert alert-danger">
+              <div *ngIf="userForm.controls.dob.errors.required"> DOB is required.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="gender">{{ 'ask_gender' | translate }}</label>
+            <select id="gender" class="form-control" formControlName="gender">
+              <option value="" selected>Select Gender</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+            </select>
+            <div
+              *ngIf="userForm.controls.gender.invalid && (userForm.controls.gender.dirty || userForm.controls.gender.touched)"
+              class="alert alert-danger">
+              <div *ngIf="userForm.controls.gender.errors.required"> Gender is required.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">{{ 'password' | translate }}</label>
+            <input id="password" type="password" class="form-control" formControlName="password"
+              placeholder="Enter Password" required>
+
+            <div
+              *ngIf="userForm.controls.password.invalid && (userForm.controls.password.dirty || userForm.controls.password.touched)"
+              class="alert alert-danger">
+              <div *ngIf="userForm.controls.password.errors.required"> Password is required.</div>
+              <div *ngIf="userForm.controls.password.errors.minlength"> Password must be at least 6 characters long.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm_password">{{ 'retype_password' | translate }}</label>
+            <input id="confirm_password" type="password" class="form-control" formControlName="confirm_password"
+              placeholder="Re-enter Password" required>
+
+            <div
+              *ngIf="userForm.controls.confirm_password.invalid && (userForm.controls.confirm_password.dirty || userForm.controls.confirm_password.touched)"
+              class="alert alert-danger">
+              <div *ngIf="userForm.controls.confirm_password.errors.required"> Confirm Password is required.</div>
+              <div *ngIf="userForm.controls.confirm_password.errors.minlength"> Confirm Password must be at least 6
+                characters long.</div>
+
+            </div>
+            <div *ngIf="userForm.controls.confirm_password.touched && userForm.hasError('validConfirmPassword')"
+              class="alert alert-danger">
+              <div *ngIf="userForm.hasError('validConfirmPassword')">Confirm Your Password.</div>
+            </div>
+          </div> -->
+
+          <div class="btnwrapper text-left" *ngIf="showPage5">
+            <ion-button type="submit" class="login__button" (click)="submitForm()">
+              {{ 'Sign_up_with_mail' | translate }} <ion-img src="assets/images/loader.gif" *ngIf="showLoaderImg"
+                class="loadingimg"></ion-img>
+            </ion-button>
+          </div>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-grid class="second__section">
+    <ion-row class="col-space">
+      <ion-col col-12 class="form__section">
+        <a routerLink="/auth/login"> {{ 'login_with_mail' | translate }} </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+</ion-content>

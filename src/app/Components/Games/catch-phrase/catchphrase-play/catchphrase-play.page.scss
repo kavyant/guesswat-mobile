@@ -1,0 +1,346 @@
+ion-toolbar {
+  .header__image {
+    ion-img {
+      width: 35px;
+      display: block;
+      margin: 0px auto;
+      position: relative;
+      top: -8px;
+    }
+  }
+}
+
+.mainWord {
+  font-size: 36px;
+  color: white;
+  font-weight: bolder;
+  // margin-top: 100px;
+  text-align: center;
+}
+
+.currentRound1 {
+  transform: scale(2);
+  -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
+  animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
+.currentRound2 {
+  transform: scale(2);
+  -webkit-animation: pulsate-fwd 0.3s ease-in-out infinite both;
+  animation: pulsate-fwd 0.3s ease-in-out infinite both;
+}
+.currentRound3 {
+  transform: scale(2);
+  -webkit-animation: pulsate-fwd 0.1s ease-in-out infinite both;
+  animation: pulsate-fwd 0.1s ease-in-out infinite both;
+}
+:host {
+  .background {
+    --background: url("../../../../../assets/images/bg-patern.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .top_padding {
+      padding-top: 0rem;
+      h1 {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 5px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .eye_image {
+        width: 40px;
+        margin: 26px auto;
+        position: absolute;
+        display: block;
+        left: 44%;
+      }
+      .num {
+        color: #fff;
+        position: relative;
+        text-align: center;
+        top: 38px;
+        font-size: 17px;
+      }
+      .chatbox {
+        padding: 0rem 0px 1rem 0;
+        border-top: 3px dashed #7fb9df;
+        border-bottom: 3px dashed #7fb9df;
+        margin-bottom: 4.5rem;
+        margin-top: 35px;
+        position: relative;
+        h2,
+        h3 {
+          color: #fff;
+          font-size: 0.94rem;
+          font-weight: 600;
+          font-family: "Open Sans", sans-serif;
+          background: #1c9ed8;
+          padding: 0.75rem 0.75rem;
+          border-radius: 0.55rem;
+          outline: none;
+        }
+        h2:after {
+          content: "";
+          position: absolute;
+          width: 0%;
+          border: 17px solid #1c9ed8;
+          right: 0;
+          left: 26%;
+          bottom: 8%;
+          border-right: 16px solid transparent;
+          border-left: 16px solid transparent;
+          border-bottom: none;
+          transform: translate(10px, 10px);
+          top: 68%;
+        }
+        h3:after {
+          content: "";
+          position: absolute;
+          width: 0%;
+          border: 17px solid #1c9ed8;
+          left: 5%;
+          bottom: 8%;
+          border-right: 16px solid transparent;
+          border-left: 16px solid transparent;
+          border-bottom: none;
+          transform: translate(10px, 10px);
+          top: 65%;
+        }
+        ion-avatar {
+          .user__image {
+            border-radius: 1.3rem;
+            border: 0.22rem solid #fff;
+            outline: none;
+            width: 4.2rem;
+            height: 4.2rem;
+            object-fit: cover;
+            &--right-image {
+              position: absolute;
+              right: 7%;
+            }
+          }
+        }
+        .username {
+          text-align: center;
+          color: #fff;
+          font-size: 14px;
+          margin: 4px 0 0 0;
+          display: flex;
+        }
+        .chatinput {
+          position: relative;
+          margin-top: 1.5rem;
+          width: 100%;
+          .submit_btn {
+            --border-radius: 7px !important;
+            position: absolute;
+            right: 0%;
+            width: 35px;
+            height: 33px;
+            top: 31%;
+            z-index: 9;
+            .arrow__input {
+              font-size: 25px !important;
+              position: absolute;
+            }
+          }
+          ion-input {
+            border: none;
+            background: #fff;
+            border-radius: 10px;
+            height: 40px;
+            padding: 5px 10px !important;
+            width: 100%;
+            margin: 35px 0;
+            font-weight: 700;
+          }
+        }
+        .three_image_badge {
+          position: absolute;
+          top: 28%;
+          right: 12%;
+          display: flex;
+          .badge_image {
+            width: 38px;
+            margin: 0px;
+          }
+          .badge__icon {
+            background: #b21607;
+            border-radius: 50px;
+            width: 25px;
+            height: 25px;
+            padding: 8px 0 0 0;
+            position: absolute;
+            font-size: 12px;
+            top: -10%;
+          }
+        }
+      }
+      .image__section {
+        padding: 0rem 0px 1rem 0;
+        .four_image_section {
+          ion-avatar {
+            padding-top: 0.65rem;
+            .user__image {
+              border-radius: 1.3rem;
+              border: 0.22rem solid #fff;
+              outline: none;
+              width: 4.2rem;
+              height: 4.2rem;
+              object-fit: cover;
+              &--right-image {
+                position: absolute;
+                right: 7%;
+              }
+            }
+          }
+          div {
+            background: #fff;
+            padding: 12px 0px;
+            border-radius: 7px;
+            margin-top: 2.6rem;
+            width: 45px;
+            height: 45px;
+            margin-left: 12px;
+            .emoji__icon_right {
+              width: 25px;
+              margin: 0 auto;
+            }
+            .emoji__icon_left {
+              width: 25px;
+              margin: 0 auto;
+            }
+          }
+          .emoji__icon_left:after {
+            content: "";
+            position: absolute;
+            left: 9px;
+            top: 63%;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-left-color: #fff;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            border-bottom: 8px solid #fff;
+          }
+          .emoji__icon_right:after {
+            content: "";
+            position: absolute;
+            right: 0px;
+            top: 58%;
+            width: 0;
+            height: 0;
+            border: 13px solid transparent;
+            border-left-color: #fff;
+            border-right: 5px solid transparent;
+          }
+        }
+        .username {
+          text-align: center;
+          color: #fff;
+          font-size: 9px;
+          position: relative;
+          left: 10px;
+        }
+      }
+    }
+  }
+  ion-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    bottom: 100%;
+  }
+  ion-header ion-toolbar {
+    --background: url("../../../../../assets/images/mobile-header-bg.png") no-repeat center center / 100% 100% !important;
+  }
+}
+
+.hgt_head {
+  height: 55px;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 400px) {
+  .three_image_badge {
+    margin: 0 auto !important;
+    display: block;
+    position: absolute;
+    right: 0 !important;
+    top: 20% !important;
+    div {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .badge_image {
+      width: 50px !important;
+      margin: 0px;
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 567px) {
+  .three_image_badge {
+    .badge_image {
+      width: 50px !important;
+      margin: 0px;
+    }
+  }
+  .chatinput {
+    margin-top: 1.6rem !important;
+  }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 374px) {
+  ion-avatar {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 400px) {
+  ion-avatar {
+    .user__image {
+      width: 4.9rem !important;
+      height: 4.9rem !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 415px) {
+  ion-avatar {
+    .user__image {
+      width: 5.7rem !important;
+      height: 5.7rem !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 410px) {
+  .four_image_section {
+    div {
+      .emoji__icon_right:after {
+        content: "";
+        position: absolute;
+        border-right: 16px solid transparent !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 410px) and (max-width: 567px) {
+  .four_image_section {
+    div {
+      .emoji__icon_right:after {
+        content: "";
+        position: absolute;
+        border-right: 16px solid transparent !important;
+      }
+    }
+    .right_image {
+      margin-left: 1.4rem !important;
+    }
+  }
+}

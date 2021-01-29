@@ -1,0 +1,7 @@
+{
+  "name": "Guesswat",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

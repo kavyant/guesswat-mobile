@@ -1,0 +1,53 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			<!--<img src="assets/images/hint-single.png" class="pass_single1"/>-->
+			Freezo Shop
+		</ion-title>
+		<ion-img routerLink="/index-afterlogin" src="assets/images/backarrow.png" class="arrow_back"></ion-img>
+	</ion-toolbar>
+</ion-header>
+
+
+<ion-content class="background shoppage">
+	<div class="header_margin">
+	</div>
+
+	<ng-container *ngFor="let data of this.freezoData | keyvalue:disableSort;">
+
+		<ion-grid *ngIf="this.user.gameprofile.coins >= data.value.coins">
+			<div class="white-bg">
+				<ion-row>
+					<ion-col size="3">
+						<h3 class="free">{{data.value.value}} Free</h3>
+					</ion-col>
+					<ion-col size="3">
+						<ion-img src="assets/images/time-frezo-single.png" class="pass_pic"></ion-img>
+					</ion-col>
+					<ion-col size="6">
+						<ion-button class="video_btn"
+							(click)="changeAmount(data.key,data.value.value,data.value.coins)">{{data.value.coins}}
+						</ion-button>
+						<ion-img src="assets/images/coin-single.png" class="coin"></ion-img>
+					</ion-col>
+				</ion-row>
+			</div>
+		</ion-grid>
+		<ion-grid>
+			<div class=" blugradient whitebg80">
+				<div class="row align-items-md-center">
+
+					<div class="col-5 shoplist">
+
+						<div>1 Free <img src="img/time-frezo-single.png" alt="" class="shoplist2img" /> - Free</div>
+
+					</div>
+					<div class="col-7 text-right"><a class="login-btn2" (click)="watchRewardVideo()">Watch Video</a></div>
+				</div>
+
+			</div>
+		</ion-grid>
+
+	</ng-container>
+
+</ion-content>

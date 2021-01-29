@@ -1,0 +1,120 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title> Edit Profile </ion-title>
+		<ion-img routerLink="/profile" src="assets/images/backarrow.png" class="arrow_back"></ion-img>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+	<ion-grid>
+		<ion-row>
+			<ion-col size="12">
+				<div class="overlay__background">
+					<div class="dotted__border">
+						<ion-row>
+							<ion-col size="3">
+								<ion-avatar>
+									<ion-img src="assets/images/friend2.png" class="friend_image"></ion-img>
+								</ion-avatar>
+							</ion-col>
+							<ion-col size="9">
+								<p class="username">{{this.user.displayname | titlecase}}<br>
+									<span>Played since {{this.user.joined_on | date}}</span>
+								</p>
+							</ion-col>
+						</ion-row>
+					</div>
+				</div>
+
+				<ion-grid class="background__color">
+					<ion-row class="form__section">
+						<ion-col col-12 class="col-space">
+
+							<form [formGroup]="userForm" #formDir="ngForm" class="uname" class="form">
+								<div class="form-group">
+									<h4>Personal Data</h4>
+									<input id="displayname" class="form-control" formControlName="displayname"
+										placeholder="Enter Your Display Name" required>
+									<div *ngIf="userForm.controls.displayname.invalid && (userForm.controls.displayname.dirty || userForm.controls.displayname.touched)"
+										class="alert alert-danger">
+										<div *ngIf="userForm.controls.displayname.errors.required"> Displayname is
+											required.</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<!--<label for="dob">DOB</label>-->
+									<!--<input id="dob" class="form-control datepicker" formControlName="dob"  placeholder="Enter Your DOB" required/>-->
+									<ion-datetime id="dob" displayFormat="MM/DD/YYYY" formControlName="dob"
+										class="form-control" placeholder="Date of birth" style="margin:0px">
+									</ion-datetime>
+									<div *ngIf="userForm.controls.dob.invalid && (userForm.controls.dob.dirty || userForm.controls.dob.touched)"
+										class="alert alert-danger">
+										<div *ngIf="userForm.controls.dob.errors.required"> DOB is required.</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<!--<label for="gender">Gender</label>-->
+									<select id="gender" class="form-control" formControlName="gender">
+										<option value="" selected>Select Gender</option>
+										<option value="M">Male</option>
+										<option value="F">Female</option>
+									</select>
+									<div *ngIf="userForm.controls.gender.invalid && (userForm.controls.gender.dirty || userForm.controls.gender.touched)"
+										class="alert alert-danger">
+										<div *ngIf="userForm.controls.gender.errors.required"> Gender is required.</div>
+									</div>
+								</div>
+
+								<div class="tbborder uname">
+									<h4>Password</h4>
+									<div class="form-group">
+										<!--<label for="password">Password</label>-->
+										<input id="password" type="password" class="form-control"
+											formControlName="password" placeholder="Enter Password">
+										<div *ngIf="userForm.controls.password.invalid && (userForm.controls.password.dirty || userForm.controls.password.touched)"
+											class="alert alert-danger">
+											<div *ngIf="userForm.controls.password.errors.required"> Password is
+												required.</div>
+											<div *ngIf="userForm.controls.password.errors.minlength"> Password must be
+												at least 6 characters long.</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<!--<label for="confirm_password">Confirm Password</label>-->
+										<input id="confirm_password" type="password" class="form-control"
+											formControlName="confirm_password" placeholder="Re-enter Password">
+
+										<div *ngIf="userForm.controls.confirm_password.invalid && (userForm.controls.confirm_password.dirty || userForm.controls.confirm_password.touched)"
+											class="alert alert-danger">
+											<div *ngIf="userForm.controls.confirm_password.errors.required"> Confirm
+												Password is required.</div>
+											<div *ngIf="userForm.controls.confirm_password.errors.minlength"> Confirm
+												Password must be at least 6 characters long.</div>
+
+										</div>
+										<div *ngIf="userForm.controls.confirm_password.touched && userForm.hasError('validConfirmPassword')"
+											class="alert alert-danger">
+											<div *ngIf="userForm.hasError('validConfirmPassword')">Confirm Your
+												Password.</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="btnwrapper text-left">
+									<ion-button type="submit" class="button button--save" (click)="submitForm()">SAVE
+										<ion-img src="assets/images/loader.gif" *ngIf="showLoaderImg"
+											class="loadingimg"></ion-img>
+									</ion-button>
+								</div>
+							</form>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

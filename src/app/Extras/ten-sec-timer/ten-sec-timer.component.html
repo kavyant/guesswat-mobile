@@ -1,0 +1,12 @@
+<ion-card>
+  <ion-card-content>
+    <h2>Loading {{gameName}} Game</h2>
+    <ion-slides>
+      <ion-slide>
+        <p class="timerDisplay" [class.puff-in-center]="isTimer">
+          {{mainTimer}}
+        </p>
+      </ion-slide>
+    </ion-slides>
+  </ion-card-content>
+</ion-card>

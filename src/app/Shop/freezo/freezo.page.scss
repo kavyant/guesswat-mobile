@@ -1,0 +1,31 @@
+.blugradient{
+	background: rgb(146,206,240); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(146,206,240,1) 0%, rgba(224,241,251,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(146,206,240,1) 0%,rgba(224,241,251,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(146,206,240,1) 0%,rgba(224,241,251,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#92cef0', endColorstr='#e0f1fb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+	border-radius: 10px;
+	margin: 5px 10px;
+	padding: 10px 20px;
+	color: #033d68;
+	font-size: 20px;
+	font-weight: 700;
+    }
+    .whitebg80{
+        background:rgba(255,255,255,0.8);
+        }
+        .shoplist img{
+            width: 50px;
+            }
+            .shoplist2img {
+                width: 50px;
+            }
+            .blugradient .login-btn2{
+                margin: 0;
+                
+                }
+                
+                .login-btn2 img{
+                width: 30px;
+                }

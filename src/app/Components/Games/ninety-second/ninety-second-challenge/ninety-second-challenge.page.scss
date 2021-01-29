@@ -1,0 +1,254 @@
+:host {
+  ion-content {
+    --background: url("../../../../../assets/images/bg-patern.png");
+    // --background: url("../../assets/images/bg-patern.png");
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.mainWord {
+  font-size: 36px;
+  color: white;
+  margin-top: 100px;
+  text-align: center;
+}
+ion-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  bottom: 100%;
+}
+ion-header ion-toolbar {
+  --background: url("../../../../../assets/images/mobile-header-bg.png") no-repeat center center / 100% 100% !important;
+}
+
+.play_btn {
+  width: 65px;
+}
+.timer_btn {
+  width: 57px;
+}
+.user_img_2 {
+  border-radius: 15px !important;
+  border: 1px solid #f1f1f1 !important;
+  width: 55px;
+  margin-top: -12px;
+  height: 55px;
+  position: relative;
+}
+.crown_img_6 {
+  position: absolute;
+  width: 40px;
+  top: -5px;
+  left: 14px;
+}
+.text_set_2 {
+  padding: 5px;
+  background-color: #e72105;
+  color: #fff;
+  border-radius: 50%;
+  position: relative;
+  top: 18px;
+  right: -45px;
+  text-align: center;
+  z-index: 9;
+}
+.timer_img {
+  width: 65px;
+  display: block;
+  margin: -5px auto;
+}
+.timer_span {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  top: 20%;
+  left: 41%;
+  text-align: center;
+  padding-top: 4px;
+  font-weight: 600;
+}
+.chat_section {
+  position: relative;
+  margin-top: 200px;
+  border-top: 3px dashed #1c9ed8;
+  border-bottom: 3px dashed #1c9ed8;
+  padding-bottom: 15px;
+}
+.chat_box {
+  position: relative;
+  background: #1c9ed8;
+  border-radius: 0.4em;
+  padding: 10px;
+  font-weight: 700;
+  color: #fff;
+  font-size: 16px;
+  width: 95%;
+  height: 40px;
+}
+.chat_box:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: #1c9ed8;
+  border-bottom: 0;
+  margin-left: -15px;
+  margin-bottom: -15px;
+  top: 39px;
+}
+.chat_box_2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: #1c9ed8;
+  border-bottom: 0;
+  margin-left: -15px;
+  margin-bottom: -15px;
+  top: 39px;
+  right: 20px;
+}
+.chat_box_2 {
+  position: relative;
+  background: #1c9ed8;
+  border-radius: 0.4em;
+  padding: 10px;
+  font-weight: 700;
+  color: #fff;
+  font-size: 16px;
+  width: 95%;
+  height: 40px;
+}
+.user_img_4 {
+  border-radius: 15px !important;
+  border: 3px solid #f1f1f1 !important;
+  width: 70px;
+  margin-top: 10px;
+  height: 70px;
+}
+.user_img_3 {
+  color: #fff;
+  margin-top: 14px;
+  font-size: 13px;
+}
+.flex_box {
+  display: flex;
+}
+.ims_set2 {
+  margin-top: 15px;
+  left: 4px;
+  position: relative;
+}
+.icon_set_2 {
+  border: 1px solid #000;
+  padding-top: 5px;
+  background-color: #e72105;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: -8px;
+  text-align: center;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  font-weight: 600;
+}
+.input_set {
+  background-color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #020202;
+  cursor: pointer;
+}
+.btn_set_5 {
+  position: absolute;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  top: 2px;
+  z-index: 9;
+}
+.arrow {
+  font-size: 35px !important;
+  position: absolute;
+}
+@media only screen and (max-width: 320px) {
+  .timer_span {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    top: 17%;
+    left: 41%;
+    text-align: center;
+    padding-top: 4px;
+    font-weight: 600;
+  }
+  .chat_box_2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top-color: #1c9ed8;
+    border-bottom: 0;
+    margin-left: -15px;
+    margin-bottom: -15px;
+    top: 39px;
+    right: 13px;
+  }
+  .play_btn {
+    width: 45px;
+  }
+  .timer_img {
+    width: 50px;
+    display: block;
+    margin: -5px auto;
+  }
+  .user_img_2 {
+    border-radius: 15px !important;
+    border: 1px solid #f1f1f1 !important;
+    width: 45px;
+    margin-top: -12px;
+    height: 45px;
+    position: relative;
+  }
+  .crown_img_6 {
+    position: absolute;
+    width: 40px;
+    top: -5px;
+    left: 9px;
+  }
+  .text_set_2 {
+    padding: 5px;
+    background-color: #e72105;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 13px;
+    right: -34px;
+    text-align: center;
+    z-index: 9;
+  }
+  .user_img_3 {
+    color: #fff;
+    margin-top: 25px;
+    font-size: 13px;
+  }
+}

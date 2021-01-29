@@ -1,0 +1,91 @@
+<ion-content class="background">
+  <ion-row>
+    <ion-col col-12>
+      <ion-img class="logo" src="./assets/images/guesswat-logo-new.png"></ion-img>
+      <h3 class="heading">OUR TERMS &nbsp;&nbsp; | &nbsp;&nbsp; PRIVACY</h3>
+    </ion-col>
+  </ion-row>
+
+  <ion-grid class="background__color">
+    <ion-row class="form__section">
+      <ion-col col-12 class="col-space">
+
+        <ion-row class="ion-no-padding">
+          <ion-col class="linear__gradient__fb">
+            <div class="white__background">
+              <ion-row (click)="fbLogin()">
+                <ion-col col-2 class="no-padding">
+                  <ion-img src="assets/images/fb_only.png" class="fb__icon"></ion-img>
+                </ion-col>
+                <ion-col col-2 class="column_fb">
+                  <ion-img src="assets/images/fb_text.png" class="facebook__text"></ion-img>
+                </ion-col>
+                <ion-col col-8 class="coin_icon">
+                  <ion-img src="assets/images/1000_coin.png" class="coin__image"></ion-img>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col>
+        </ion-row>
+        <p> OR </p>
+        <form [formGroup]="userForm" #formDir="ngForm">
+          <div class="form-group">
+            <label for="email">{{ 'email' | translate }}</label>
+            <input id="email" class="form-control" formControlName="email" placeholder="Enter Your Email" required />
+
+            <div
+              *ngIf="userForm.controls.email.invalid && (userForm.controls.email.dirty || userForm.controls.email.touched)"
+              class="alert alert-danger">
+              <div *ngIf="userForm.controls.email.errors.required"> Email is required.</div>
+              <div *ngIf="userForm.controls.email.errors.email"> Email is not valid.</div>
+              <div *ngIf="userForm.controls.email.errors.isEmailUnique">This email has been registered already</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">{{ 'password' | translate }}</label>
+            <input id="password" type="password" class="form-control" formControlName="password"
+              placeholder="Enter Password" required>
+
+            <div
+              *ngIf="userForm.controls.password.invalid && (userForm.controls.password.dirty || userForm.controls.password.touched)"
+              class="alert alert-danger">
+              <div *ngIf="userForm.controls.password.errors.required"> Password is required.</div>
+              <div *ngIf="userForm.controls.password.errors.minlength"> Password must be at least 6 characters long.
+              </div>
+            </div>
+          </div>
+          <div class="form-group forgetdiv">
+            <a routerLink="/forgetpassword" class="">Forget Password</a>
+          </div>
+
+          <div class="btnwrapper text-left">
+            <ion-button type="submit" (click)="submitForm()" class="login__button"> {{ 'login_with_mail' | translate }}
+              <img src="assets/images/loader.gif" *ngIf="showLoaderImg" class="loadingimg" />
+            </ion-button>
+          </div>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="second__section">
+    <span> OR </span>
+    <ion-row class="col-space">
+      <ion-col col-12 class="form__section">
+        <!--<a href="">Watch online as guest</a>-->
+        <ion-button routerLink="/auth/signup" class="sign_btn" shape="circle">{{ 'Sign_up_with_mail' | translate }}<ion-icon
+            name="arrow-dropright-circle">
+          </ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <!--<ion-row>
+			<ion-col>
+				<ion-button routerLink="/auth/signup" class="sign_btn" shape="circle">SIGN UP<ion-icon name="arrow-dropright-circle"></ion-icon></ion-button>
+			</ion-col>
+		</ion-row>-->
+  </ion-grid>
+
+</ion-content>

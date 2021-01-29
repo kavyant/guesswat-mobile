@@ -1,0 +1,8 @@
+<ion-list>
+  <ion-item *ngFor="let p of unSelArray" (click)="close(p)">
+    <ion-avatar slot="start">
+      <img src="/../assets/images/friend2.png">
+    </ion-avatar>
+    <ion-label>{{p.username}}</ion-label>
+  </ion-item>
+</ion-list>
